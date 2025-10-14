@@ -483,50 +483,6 @@ export default function Future() {
           </div>
         </div>
       </section>
-
-      {/* Commitment to Company */}
-      <section className="py-16 px-6 bg-gradient-to-r from-orange-50 to-blue-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <Card className="bg-gradient-to-r from-orange-500 to-blue-600 text-white">
-            <CardContent className="py-12">
-              <div className="mb-6">
-                <Award className="w-16 h-16 mx-auto mb-4" />
-                <h2 className="text-3xl font-bold mb-4">
-                  Cam Kết Với FPT Telecom
-                </h2>
-                <p className="text-lg leading-relaxed mb-6">
-                  Tôi cam kết tiếp tục đóng góp vào sự phát triển của FPT
-                  Telecom thông qua việc học hỏi liên tục, đổi mới sáng tạo và
-                  làm việc hiệu quả trong team.
-                </p>
-                <p className="text-lg leading-relaxed mb-8">
-                  Với sự nhiệt huyết và tinh thần trách nhiệm, tôi mong muốn trở
-                  thành một phần quan trọng trong hành trình phát triển của công
-                  ty và ngành viễn thông Việt Nam.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    variant="secondary"
-                    size="lg"
-                    className="bg-white text-orange-600 hover:bg-gray-100"
-                  >
-                    <Star className="w-4 h-4 mr-2" />
-                    Xem Portfolio
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-white text-white hover:bg-white hover:text-orange-600"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    Liên hệ ngay
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
     </div>
   );
 }

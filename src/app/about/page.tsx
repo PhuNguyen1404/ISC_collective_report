@@ -35,7 +35,7 @@ export default function About() {
               Giới Thiệu Cá Nhân
             </h1>
             <p className="text-xl text-gray-600 mb-6">
-              Developer Fullstack tại FPT Telecom
+              Em là Nguyễn Ngọc Phú - dev của team dev VOC - Omni
             </p>
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
               <div className="flex items-center space-x-2">
@@ -99,16 +99,7 @@ export default function About() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <p className="text-sm text-gray-600">your.email@fpt.com</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-900">Phone</p>
-                    <p className="text-sm text-gray-600">+84 xxx xxx xxx</p>
+                    <p className="text-sm text-gray-600">phunn7@fpt.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
