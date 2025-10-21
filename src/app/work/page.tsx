@@ -399,7 +399,7 @@ export default function Work() {
       </section>
 
       {/* Skills & Technologies */}
-      <section className="py-16 px-6 bg-white/50">
+      <section className="py-16 px-6 bg-white/50 dark:bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">

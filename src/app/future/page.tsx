@@ -24,14 +24,14 @@ import {
 
 export default function Future() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Kế Hoạch Tương Lai
           </h1>
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
             Định hướng phát triển và đóng góp cho FPT Telecom
           </p>
         </div>
@@ -41,10 +41,12 @@ export default function Future() {
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Lộ Trình Phát Triển
             </h2>
-            <p className="text-gray-600">Kế hoạch ngắn hạn và dài hạn</p>
+            <p className="text-gray-600 dark:text-gray-300">
+              Kế hoạch ngắn hạn và dài hạn
+            </p>
           </div>
 
           <div className="relative">
@@ -71,7 +73,7 @@ export default function Future() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
                         Developer Fullstack với kinh nghiệm hơn 1 năm, đang tham
                         gia dự án VOC và chuẩn bị cho OmniSR.
                       </p>
@@ -97,7 +99,7 @@ export default function Future() {
                   <Clock className="w-5 h-5 text-white" />
                 </div>
                 <div className="w-1/2 pl-8">
-                  <Card className="border-l-4 border-l-blue-500">
+                  <Card className="border-l-4 border-l-blue-500 dark:bg-gray-800">
                     <CardHeader>
                       <div className="flex items-center justify-between">
                         <div>
@@ -114,7 +116,7 @@ export default function Future() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
                         Tham gia dự án OmniSR, phát triển kỹ năng frontend và
                         trở thành fullstack developer thực thụ.
                       </p>
@@ -149,7 +151,7 @@ export default function Future() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
                         Đóng góp vào các dự án lớn, học cloud computing và phát
                         triển kỹ năng leadership.
                       </p>
@@ -192,7 +194,7 @@ export default function Future() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
                         Trở thành Senior Developer, đóng góp vào chiến lược công
                         ty và mentoring junior developers.
                       </p>
@@ -212,18 +214,20 @@ export default function Future() {
       </section>
 
       {/* Detailed Goals */}
-      <section className="py-16 px-6 bg-white/50">
+      <section className="py-16 px-6 bg-white/50 dark:bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Mục Tiêu Chi Tiết
             </h2>
-            <p className="text-gray-600">Kế hoạch cụ thể cho từng giai đoạn</p>
+            <p className="text-gray-600 dark:text-gray-300">
+              Kế hoạch cụ thể cho từng giai đoạn
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Short-term Goals */}
-            <Card className="border-l-4 border-l-blue-500">
+            <Card className="border-l-4 border-l-blue-500 dark:bg-gray-800">
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -244,10 +248,10 @@ export default function Future() {
                       <span className="text-white text-xs font-bold">1</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
                         Tham gia Project OmniSR
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         Phát triển giao diện frontend với React và TypeScript
                       </p>
                       <div className="flex flex-wrap gap-1 mt-2">
@@ -271,10 +275,10 @@ export default function Future() {
                       <span className="text-white text-xs font-bold">2</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
                         Trở thành Fullstack Developer
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         Nâng cao kỹ năng frontend để trở thành fullstack thực
                         thụ
                       </p>
@@ -285,10 +289,10 @@ export default function Future() {
                       <span className="text-white text-xs font-bold">3</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
                         Học thêm công nghệ mới
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         Mở rộng kiến thức về modern frontend frameworks và tools
                       </p>
                     </div>
@@ -298,10 +302,10 @@ export default function Future() {
                       <span className="text-white text-xs font-bold">4</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
                         Cải thiện kỹ năng mềm
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         Phát triển kỹ năng giao tiếp và presentation
                       </p>
                     </div>
@@ -332,10 +336,10 @@ export default function Future() {
                       <span className="text-white text-xs font-bold">1</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
                         Đóng góp vào các dự án lớn
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         Tham gia vào các project quan trọng của công ty
                       </p>
                     </div>
@@ -345,10 +349,10 @@ export default function Future() {
                       <span className="text-white text-xs font-bold">2</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
                         Hướng tới vị trí Senior Developer
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         Phát triển kỹ năng leadership và mentoring
                       </p>
                     </div>
@@ -358,10 +362,10 @@ export default function Future() {
                       <span className="text-white text-xs font-bold">3</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
                         Học Cloud Computing
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         AWS/Azure để hỗ trợ scalability hệ thống telecom
                       </p>
                       <div className="flex flex-wrap gap-1 mt-2">
@@ -385,10 +389,10 @@ export default function Future() {
                       <span className="text-white text-xs font-bold">4</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
                         Đóng góp ý tưởng cải tiến
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         Nâng cao chất lượng dịch vụ và hiệu quả làm việc
                       </p>
                     </div>
@@ -404,10 +408,10 @@ export default function Future() {
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Lộ Trình Học Tập
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-gray-300">
               Kế hoạch phát triển kỹ năng và kiến thức
             </p>
           </div>
@@ -422,7 +426,7 @@ export default function Future() {
                 <CardDescription>Tháng 11/2025 - Tháng 2/2026</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="text-sm text-gray-600 space-y-2 text-left">
+                <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-2 text-left">
                   <li>• React Advanced Patterns</li>
                   <li>• TypeScript Deep Dive</li>
                   <li>• Next.js App Router</li>
@@ -446,7 +450,7 @@ export default function Future() {
                 <CardDescription>Tháng 3/2026 - Tháng 6/2026</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="text-sm text-gray-600 space-y-2 text-left">
+                <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-2 text-left">
                   <li>• AWS Fundamentals</li>
                   <li>• Docker & Containerization</li>
                   <li>• CI/CD Pipelines</li>
@@ -468,7 +472,7 @@ export default function Future() {
                 <CardDescription>Tháng 7/2026 - Tháng 10/2026</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="text-sm text-gray-600 space-y-2 text-left">
+                <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-2 text-left">
                   <li>• Team Leadership</li>
                   <li>• Mentoring & Coaching</li>
                   <li>• Project Management</li>

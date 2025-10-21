@@ -6,191 +6,242 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import {
-  Code,
-  Users,
-  Target,
-  BookOpen,
-  Lightbulb,
-  TrendingUp,
-  Award,
-  CheckCircle,
-  Star,
+  Zap,
+  Network,
+  Database,
+  Shield,
+  Settings,
+  BarChart3,
+  Globe,
+  Cpu,
+  Workflow,
+  Layers,
 } from "lucide-react";
 
-export default function Lessons() {
+export default function OmniSR() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Bài Học Rút Ra
+            OmniSR Platform
           </h1>
           <p className="text-xl text-gray-600 mb-6">
-            Những kinh nghiệm quý báu từ hành trình phát triển tại FPT Telecom
+            Đây là dự án tích hợp service OmniAgent vào platform SR
           </p>
         </div>
       </section>
 
-      {/* Technical Skills */}
+      {/* Mind Map Section */}
       <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Kỹ Năng Kỹ Thuật
+              Kiến Trúc OmniSR
             </h2>
-            <p className="text-gray-600">Phát triển chuyên môn và công nghệ</p>
+            <p className="text-gray-600">Mind-map tổng quan về hệ thống</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Technical Skills Progress */}
-            <Card>
+          {/* Central Node - OmniSR Core */}
+          <div className="flex justify-center mb-12">
+            <Card className="w-80 bg-gradient-to-r from-blue-500 to-purple-600 text-white border-0 shadow-2xl">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl">OmniSR Core</CardTitle>
+                <CardDescription className="text-white/80">
+                  Trung tâm tích hợp và xử lý
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+
+          {/* Mind Map Nodes */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* OmniAgent Integration */}
+            <Card className="border-l-4 border-l-green-500 hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                    <Code className="w-5 h-5 text-green-600" />
+                    <Network className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl">Mức Độ Thành Thạo</CardTitle>
-                    <CardDescription>Đánh giá kỹ năng hiện tại</CardDescription>
+                    <CardTitle className="text-lg">OmniAgent</CardTitle>
+                    <CardDescription>Service tích hợp chính</CardDescription>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium">
-                      Laravel Framework
-                    </span>
-                    <span className="text-sm text-gray-500">85%</span>
+              <CardContent>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span>API Gateway</span>
                   </div>
-                  <Progress value={85} className="h-3" />
-                  <p className="text-xs text-gray-500 mt-1">
-                    Từ project VOC và OmniAgent
-                  </p>
-                </div>
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium">SQL & Database</span>
-                    <span className="text-sm text-gray-500">80%</span>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span>Service Discovery</span>
                   </div>
-                  <Progress value={80} className="h-3" />
-                  <p className="text-xs text-gray-500 mt-1">
-                    MySQL, PostgreSQL, query optimization
-                  </p>
-                </div>
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium">API Development</span>
-                    <span className="text-sm text-gray-500">90%</span>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span>Load Balancing</span>
                   </div>
-                  <Progress value={90} className="h-3" />
-                  <p className="text-xs text-gray-500 mt-1">
-                    RESTful APIs, documentation, testing
-                  </p>
-                </div>
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium">
-                      Big Data (Kafka, Kibana)
-                    </span>
-                    <span className="text-sm text-gray-500">75%</span>
-                  </div>
-                  <Progress value={75} className="h-3" />
-                  <p className="text-xs text-gray-500 mt-1">
-                    Streaming data, visualization
-                  </p>
-                </div>
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium">
-                      Monitoring (OpenTelemetry)
-                    </span>
-                    <span className="text-sm text-gray-500">70%</span>
-                  </div>
-                  <Progress value={70} className="h-3" />
-                  <p className="text-xs text-gray-500 mt-1">
-                    Application performance monitoring
-                  </p>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Key Learnings */}
-            <Card>
+            {/* SR Platform */}
+            <Card className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Lightbulb className="w-5 h-5 text-blue-600" />
+                    <Layers className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl">
-                      Bài Học Quan Trọng
-                    </CardTitle>
-                    <CardDescription>
-                      Những insight quan trọng nhất
-                    </CardDescription>
+                    <CardTitle className="text-lg">SR Platform</CardTitle>
+                    <CardDescription>Nền tảng quản lý yêu cầu</CardDescription>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Star className="w-4 h-4 text-orange-600" />
+              <CardContent>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span>Request Management</span>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">
-                      Clean Code là chìa khóa
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      Code phải dễ đọc, dễ maintain và có thể mở rộng. Từ
-                      project VOC, tôi học được tầm quan trọng của việc viết
-                      code sạch.
-                    </p>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span>Ticket System</span>
                   </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Star className="w-4 h-4 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">
-                      Testing không thể bỏ qua
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      Unit tests và integration tests giúp đảm bảo chất lượng
-                      code và giảm bugs trong production.
-                    </p>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span>Workflow Engine</span>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Star className="w-4 h-4 text-blue-600" />
+              </CardContent>
+            </Card>
+
+            {/* Database Layer */}
+            <Card className="border-l-4 border-l-orange-500 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <Database className="w-5 h-5 text-orange-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">
-                      Monitoring là cần thiết
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      OpenTelemetry giúp tôi hiểu rõ hơn về performance và có
-                      thể debug nhanh chóng khi có vấn đề.
-                    </p>
+                    <CardTitle className="text-lg">Database</CardTitle>
+                    <CardDescription>Lưu trữ dữ liệu</CardDescription>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Star className="w-4 h-4 text-purple-600" />
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    <span>MySQL/PostgreSQL</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    <span>Redis Cache</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    <span>Data Replication</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Security */}
+            <Card className="border-l-4 border-l-red-500 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">
-                      Documentation quan trọng
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      API documentation và code comments giúp team hiểu và
-                      maintain code dễ dàng hơn.
-                    </p>
+                    <CardTitle className="text-lg">Security</CardTitle>
+                    <CardDescription>Bảo mật hệ thống</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span>Authentication</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span>Authorization</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span>Data Encryption</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Monitoring */}
+            <Card className="border-l-4 border-l-purple-500 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <BarChart3 className="w-5 h-5 text-purple-600" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Monitoring</CardTitle>
+                    <CardDescription>Giám sát hệ thống</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span>OpenTelemetry</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span>Performance Metrics</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span>Alert System</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Configuration */}
+            <Card className="border-l-4 border-l-indigo-500 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                    <Settings className="w-5 h-5 text-indigo-600" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Configuration</CardTitle>
+                    <CardDescription>Cấu hình hệ thống</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                    <span>Environment Config</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                    <span>Service Registry</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                    <span>Feature Flags</span>
                   </div>
                 </div>
               </CardContent>
@@ -199,320 +250,188 @@ export default function Lessons() {
         </div>
       </section>
 
-      {/* Soft Skills */}
-      <section className="py-16 px-6 bg-white/50">
+      {/* Technology Stack */}
+      <section className="py-16 px-6 bg-white/50 dark:bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Kỹ Năng Mềm
+              Công Nghệ Sử Dụng
             </h2>
-            <p className="text-gray-600">Phát triển cá nhân và teamwork</p>
+            <p className="text-gray-600">Stack công nghệ trong dự án OmniSR</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center">
+            <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-blue-600" />
+                  <Cpu className="w-8 h-8 text-blue-600" />
                 </div>
-                <CardTitle>Làm Việc Nhóm</CardTitle>
+                <CardTitle>Backend</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
-                  Học cách phối hợp hiệu quả với team, tham gia code review và
-                  chia sẻ kiến thức.
-                </p>
-                <div className="space-y-2 text-xs text-gray-500">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Code review hàng ngày</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Chia sẻ knowledge</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Hỗ trợ đồng nghiệp</span>
-                  </div>
+                <div className="space-y-2">
+                  <Badge variant="outline" className="text-xs">
+                    Laravel
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    PHP 8+
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    API REST
+                  </Badge>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-green-600" />
+                  <Database className="w-8 h-8 text-green-600" />
                 </div>
-                <CardTitle>Quản Lý Thời Gian</CardTitle>
+                <CardTitle>Database</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
-                  Làm việc dưới áp lực deadline, ưu tiên công việc và đảm bảo
-                  chất lượng.
-                </p>
-                <div className="space-y-2 text-xs text-gray-500">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Planning & prioritization</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Deadline management</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Quality assurance</span>
-                  </div>
+                <div className="space-y-2">
+                  <Badge variant="outline" className="text-xs">
+                    MySQL
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    Redis
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    PostgreSQL
+                  </Badge>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-8 h-8 text-orange-600" />
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-purple-600" />
                 </div>
-                <CardTitle>Giải Quyết Vấn Đề</CardTitle>
+                <CardTitle>Frontend</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
-                  Debug lỗi hệ thống, tìm giải pháp sáng tạo và học hỏi từ thất
-                  bại.
-                </p>
-                <div className="space-y-2 text-xs text-gray-500">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Debugging skills</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Creative solutions</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Learn from failures</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-8 h-8 text-red-600" />
-                </div>
-                <CardTitle>Học Hỏi Liên Tục</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
-                  Thích ứng với công nghệ mới, hiểu rõ ngành telecom và nhu cầu
-                  khách hàng.
-                </p>
-                <div className="space-y-2 text-xs text-gray-500">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Continuous learning</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Technology adaptation</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    <span>Industry knowledge</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Challenges & Solutions */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Thách Thức & Giải Pháp
-            </h2>
-            <p className="text-gray-600">
-              Những khó khăn đã vượt qua và bài học rút ra
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            <Card className="border-l-4 border-l-orange-500">
-              <CardHeader>
-                <CardTitle className="text-xl text-orange-600">
-                  Thách Thức: Performance Bottleneck
-                </CardTitle>
-                <CardDescription>Dự án VOC - Xử lý dữ liệu lớn</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">
-                      Vấn đề:
-                    </h4>
-                    <ul className="space-y-2 text-gray-600 text-sm">
-                      <li>• API xử lý dữ liệu chậm khi có nhiều request</li>
-                      <li>• Database query không tối ưu</li>
-                      <li>• Memory usage cao khi xử lý batch data</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">
-                      Giải pháp:
-                    </h4>
-                    <ul className="space-y-2 text-gray-600 text-sm">
-                      <li>• Implement caching với Redis</li>
-                      <li>• Optimize SQL queries và thêm indexes</li>
-                      <li>• Sử dụng queue system cho batch processing</li>
-                      <li>• Implement pagination cho large datasets</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="mt-4 p-4 bg-green-50 rounded-lg">
-                  <p className="text-sm text-green-800">
-                    <strong>Kết quả:</strong> Giảm 60% thời gian phản hồi API và
-                    tăng 40% throughput.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-l-4 border-l-blue-500">
-              <CardHeader>
-                <CardTitle className="text-xl text-blue-600">
-                  Thách Thức: Integration Complexity
-                </CardTitle>
-                <CardDescription>
-                  Dự án OmniAgent - Tích hợp nhiều hệ thống
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">
-                      Vấn đề:
-                    </h4>
-                    <ul className="space-y-2 text-gray-600 text-sm">
-                      <li>• Mỗi hệ thống có API format khác nhau</li>
-                      <li>• Error handling phức tạp</li>
-                      <li>• Data transformation phức tạp</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">
-                      Giải pháp:
-                    </h4>
-                    <ul className="space-y-2 text-gray-600 text-sm">
-                      <li>• Tạo adapter pattern cho mỗi integration</li>
-                      <li>• Implement retry mechanism và circuit breaker</li>
-                      <li>• Sử dụng OpenTelemetry để monitor</li>
-                      <li>• Tạo comprehensive error handling</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="mt-4 p-4 bg-green-50 rounded-lg">
-                  <p className="text-sm text-green-800">
-                    <strong>Kết quả:</strong> Tăng 80% độ ổn định và giảm 70%
-                    thời gian debug.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Future Learning Goals */}
-      <section className="py-16 px-6 bg-gradient-to-r from-orange-50 to-blue-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Mục Tiêu Học Tập Tiếp Theo
-            </h2>
-            <p className="text-gray-600">
-              Những kỹ năng và công nghệ muốn phát triển
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-green-600" />
-                </div>
-                <CardTitle>Frontend Development</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
-                  Nâng cao kỹ năng React, TypeScript và modern frontend
-                  frameworks.
-                </p>
-                <div className="flex flex-wrap gap-1 justify-center">
-                  <Badge variant="secondary" className="text-xs">
+                <div className="space-y-2">
+                  <Badge variant="outline" className="text-xs">
                     React
                   </Badge>
-                  <Badge variant="secondary" className="text-xs">
+                  <Badge variant="outline" className="text-xs">
                     TypeScript
                   </Badge>
-                  <Badge variant="secondary" className="text-xs">
+                  <Badge variant="outline" className="text-xs">
                     Next.js
                   </Badge>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Workflow className="w-8 h-8 text-orange-600" />
                 </div>
-                <CardTitle>Cloud Computing</CardTitle>
+                <CardTitle>DevOps</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
-                  Học AWS/Azure để deploy và scale applications.
-                </p>
-                <div className="flex flex-wrap gap-1 justify-center">
-                  <Badge variant="secondary" className="text-xs">
-                    AWS
-                  </Badge>
-                  <Badge variant="secondary" className="text-xs">
-                    Azure
-                  </Badge>
-                  <Badge variant="secondary" className="text-xs">
+                <div className="space-y-2">
+                  <Badge variant="outline" className="text-xs">
                     Docker
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    Kubernetes
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    CI/CD
                   </Badge>
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
 
-            <Card className="text-center">
+      {/* Key Features */}
+      <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Tính Năng Chính
+            </h2>
+            <p className="text-gray-600">Các tính năng nổi bật của OmniSR</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="border-l-4 border-l-green-500">
               <CardHeader>
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-purple-600" />
-                </div>
-                <CardTitle>Leadership Skills</CardTitle>
+                <CardTitle className="text-xl text-green-600">
+                  Tích Hợp OmniAgent
+                </CardTitle>
+                <CardDescription>Service tích hợp thông minh</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
-                  Phát triển kỹ năng leadership và mentoring.
-                </p>
-                <div className="flex flex-wrap gap-1 justify-center">
-                  <Badge variant="secondary" className="text-xs">
-                    Team Lead
-                  </Badge>
-                  <Badge variant="secondary" className="text-xs">
-                    Mentoring
-                  </Badge>
-                  <Badge variant="secondary" className="text-xs">
-                    Project Management
-                  </Badge>
-                </div>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li>• API Gateway tập trung</li>
+                  <li>• Service Discovery tự động</li>
+                  <li>• Load Balancing thông minh</li>
+                  <li>• Circuit Breaker pattern</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-blue-500">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-600">
+                  Quản Lý Service Request
+                </CardTitle>
+                <CardDescription>
+                  Hệ thống quản lý yêu cầu dịch vụ
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li>• Workflow engine linh hoạt</li>
+                  <li>• Ticket system tích hợp</li>
+                  <li>• Approval process tự động</li>
+                  <li>• Notification system</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-purple-500">
+              <CardHeader>
+                <CardTitle className="text-xl text-purple-600">
+                  Monitoring & Analytics
+                </CardTitle>
+                <CardDescription>
+                  Giám sát và phân tích hệ thống
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li>• Real-time monitoring</li>
+                  <li>• Performance metrics</li>
+                  <li>• Alert system</li>
+                  <li>• Dashboard analytics</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-orange-500">
+              <CardHeader>
+                <CardTitle className="text-xl text-orange-600">
+                  Security & Compliance
+                </CardTitle>
+                <CardDescription>Bảo mật và tuân thủ quy định</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li>• Multi-factor authentication</li>
+                  <li>• Role-based access control</li>
+                  <li>• Data encryption</li>
+                  <li>• Audit logging</li>
+                </ul>
               </CardContent>
             </Card>
           </div>

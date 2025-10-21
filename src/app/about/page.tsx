@@ -11,16 +11,17 @@ import {
   Calendar,
   MapPin,
   Mail,
-  Phone,
   GraduationCap,
   Award,
   Target,
   Heart,
+  Github,
+  Linkedin,
 } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -31,20 +32,20 @@ export default function About() {
                 FPT
               </AvatarFallback>
             </Avatar>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Giới Thiệu Cá Nhân
             </h1>
-            <p className="text-xl text-gray-600 mb-6">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
               Em là Nguyễn Ngọc Phú - dev của team dev VOC - Omni
             </p>
-            <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
+            <div className="flex items-center justify-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
               <div className="flex items-center space-x-2">
                 <Calendar className="w-4 h-4" />
                 <span>Thời gian: 1/1/2025 - Hiện tại</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span>Hà Nội, Việt Nam</span>
+                <span>Thành phố Hồ Chí Minh, Việt Nam</span>
               </div>
             </div>
           </div>
@@ -56,21 +57,23 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* About Me */}
-            <Card>
+            <Card className="dark:bg-gray-800">
               <CardHeader>
-                <CardTitle className="text-2xl text-orange-600">
+                <CardTitle className="text-2xl text-orange-600 dark:text-orange-400">
                   Về Tôi
                 </CardTitle>
-                <CardDescription>Thông tin cá nhân và mục tiêu</CardDescription>
+                <CardDescription className="dark:text-gray-300">
+                  Thông tin cá nhân và mục tiêu
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   Tôi là một Developer Fullstack với hơn 1 năm kinh nghiệm làm
                   việc tại FPT Telecom. Với niềm đam mê công nghệ và sự nhiệt
                   huyết trong việc học hỏi, tôi đã tham gia vào nhiều dự án quan
                   trọng và đóng góp vào sự phát triển của công ty.
                 </p>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   Tôi tin rằng công nghệ có thể thay đổi thế giới và luôn cố
                   gắng học hỏi những công nghệ mới để có thể đóng góp tốt nhất
                   cho team và công ty.
@@ -85,30 +88,76 @@ export default function About() {
             </Card>
 
             {/* Contact Information */}
-            <Card>
+            <Card className="dark:bg-gray-800">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-600">
+                <CardTitle className="text-2xl text-blue-600 dark:text-blue-400">
                   Thông Tin Liên Hệ
                 </CardTitle>
-                <CardDescription>Kết nối và trao đổi</CardDescription>
+                <CardDescription className="dark:text-gray-300">
+                  Kết nối và trao đổi
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-orange-600" />
+                  <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-orange-600 dark:text-orange-400" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Email</p>
-                    <p className="text-sm text-gray-600">phunn7@fpt.com</p>
+                    <p className="font-medium text-gray-900 dark:text-white">
+                      Email
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      phunn7@fpt.com
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-green-600" />
+                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-green-600 dark:text-green-400" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Location</p>
-                    <p className="text-sm text-gray-600">Hà Nội, Việt Nam</p>
+                    <p className="font-medium text-gray-900 dark:text-white">
+                      Location
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      Thành phố Hồ Chí Minh, Việt Nam
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center">
+                    <Github className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900 dark:text-white">
+                      GitHub
+                    </p>
+                    <a
+                      href="https://github.com/PhuNguyen1404"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      github.com/PhuNguyen1404
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                    <Linkedin className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900 dark:text-white">
+                      LinkedIn
+                    </p>
+                    <a
+                      href="https://www.linkedin.com/in/nguyenphu14403"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      linkedin.com/in/nguyenphu14403
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -118,7 +167,7 @@ export default function About() {
       </section>
 
       {/* Journey Timeline */}
-      <section className="py-16 px-6 bg-white/50">
+      <section className="py-16 px-6 bg-white/50 dark:bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
