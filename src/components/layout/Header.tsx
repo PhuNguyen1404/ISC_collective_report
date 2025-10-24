@@ -6,8 +6,6 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
   Home,
-  Briefcase,
-  BookOpen,
   Target,
   User,
   Menu,
@@ -17,17 +15,38 @@ import {
   Zap,
   Sun,
   Moon,
+  Code,
+  Lightbulb,
+  FolderOpen,
+  BookOpen,
 } from "lucide-react";
 import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
+import { Dropdown, MobileDropdown } from "@/components/ui/dropdown";
 
 const navigation = [
   { name: "Trang Chủ", href: "/", icon: Home },
   { name: "Giới Thiệu", href: "/about", icon: User },
-  { name: "VOC Project", href: "/voc", icon: Database },
-  { name: "OmniAgent", href: "/omniagent", icon: Network },
-  { name: "OmniSR", href: "/omnisr", icon: Zap },
-  { name: "Kế Hoạch", href: "/future", icon: Target },
+  {
+    name: "Dự Án",
+    icon: FolderOpen,
+    isDropdown: true,
+    items: [
+      { name: "VOC Project", href: "/voc", icon: Database },
+      { name: "OmniAgent", href: "/omniagent", icon: Network },
+      { name: "OmniSR", href: "/omnisr", icon: Zap },
+    ],
+  },
+  {
+    name: "Học Tập",
+    icon: BookOpen,
+    isDropdown: true,
+    items: [
+      { name: "Công Việc", href: "/work", icon: Code },
+      { name: "Bài Học", href: "/lessons", icon: Lightbulb },
+      { name: "Kế Hoạch", href: "/future", icon: Target },
+    ],
+  },
 ];
 
 export default function Header() {
@@ -58,10 +77,23 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-1">
             {navigation.map((item) => {
               const Icon = item.icon;
+
+              if (item.isDropdown) {
+                return (
+                  <Dropdown
+                    key={item.name}
+                    name={item.name}
+                    icon={Icon}
+                    items={item.items || []}
+                    pathname={pathname}
+                  />
+                );
+              }
+
               return (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  href={item.href!}
                   className={cn(
                     "flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
                     pathname === item.href
@@ -122,10 +154,24 @@ export default function Header() {
             <nav className="flex flex-col space-y-2 pt-4">
               {navigation.map((item) => {
                 const Icon = item.icon;
+
+                if (item.isDropdown) {
+                  return (
+                    <MobileDropdown
+                      key={item.name}
+                      name={item.name}
+                      icon={Icon}
+                      items={item.items || []}
+                      pathname={pathname}
+                      onItemClick={() => setIsMenuOpen(false)}
+                    />
+                  );
+                }
+
                 return (
                   <Link
                     key={item.name}
-                    href={item.href}
+                    href={item.href!}
                     className={cn(
                       "flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
                       pathname === item.href

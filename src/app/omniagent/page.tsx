@@ -6,10 +6,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import {
   Network,
-  Zap,
   Shield,
   Settings,
   BarChart3,
@@ -20,7 +18,6 @@ import {
   CheckCircle,
   Clock,
   Users,
-  GitBranch,
 } from "lucide-react";
 
 export default function OmniAgentProject() {
@@ -29,10 +26,10 @@ export default function OmniAgentProject() {
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white dark:text-white mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             OmniAgent Project
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 dark:text-gray-300 mb-6">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
             Hệ thống tích hợp và quản lý các service microservices
           </p>
           <div className="flex justify-center gap-4">
@@ -104,19 +101,6 @@ export default function OmniAgentProject() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white">
-                      Thời gian phát triển
-                    </h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      Khởi động: Q2/2023, Dự kiến hoàn thành: Q2/2024
-                    </p>
-                  </div>
-                </div>
               </CardContent>
             </Card>
 
@@ -139,8 +123,8 @@ export default function OmniAgentProject() {
                     Backend
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">Laravel 11</Badge>
-                    <Badge variant="outline">PHP 8.3</Badge>
+                    <Badge variant="outline">Laravel 5.2</Badge>
+                    <Badge variant="outline">PHP 7.4</Badge>
                     <Badge variant="outline">MySQL</Badge>
                     <Badge variant="outline">Redis</Badge>
                   </div>
@@ -155,16 +139,7 @@ export default function OmniAgentProject() {
                     <Badge variant="outline">API Gateway</Badge>
                   </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-                    Monitoring
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">OpenTelemetry</Badge>
-                    <Badge variant="outline">Jaeger</Badge>
-                    <Badge variant="outline">Prometheus</Badge>
-                  </div>
-                </div>
+                
               </CardContent>
             </Card>
           </div>
